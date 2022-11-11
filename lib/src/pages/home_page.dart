@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           centerTitle: true,
           title: Text('Peliculas TMDB'),
-          backgroundColor: Colors.redAccent,
+          backgroundColor: Colors.blueAccent,
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.search),
