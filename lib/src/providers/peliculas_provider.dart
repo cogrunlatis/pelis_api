@@ -7,7 +7,7 @@ import 'package:scooby_app/src/models/actores_model.dart';
 import 'package:scooby_app/src/models/pelicula_model.dart';
 
 class PeliculasProvider {
-  String _apikey = 'ab85e2ec67c3e9d2e7970e8fd9c24fdd';
+  String _apikey = 'f34f618c9cc65e3484053629ecc2b900';
   String _url = 'api.themoviedb.org';
   String _language = 'es-ES';
 
