@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text('Peliculas TMDB'),
+          title: Text('Actores TMDB'),
           backgroundColor: Colors.blueAccent,
           actions: <Widget>[
             IconButton(
