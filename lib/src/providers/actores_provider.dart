@@ -4,7 +4,6 @@ import 'dart:convert';
 import 'dart:async';
 
 import 'package:scooby_app/src/models/actores_model.dart';
-//import 'package:scooby_app/src/models/pelicula_model.dart';
 
 class ActoresProvider {
   String _apikey = 'f34f618c9cc65e3484053629ecc2b900';

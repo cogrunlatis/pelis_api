@@ -12,10 +12,11 @@ class Cast {
 }
 
 class Actor {
-  int popularity;
+  double popularity;
   String birthplace;
   int gender;
   int id;
+  String imdbId;
   String name;
   String biography;
   String known;
@@ -26,6 +27,7 @@ class Actor {
     this.birthplace,
     this.gender,
     this.id,
+    this.imdbId,
     this.name,
     this.biography,
     this.known,
@@ -37,6 +39,7 @@ class Actor {
     birthplace = json['place_of_birth'];
     gender = json['gender'];
     id = json['id'];
+    imdbId = json['imdb_id'];
     name = json['name'];
     biography = json['biography'];
     known = json['known_for_department'];
