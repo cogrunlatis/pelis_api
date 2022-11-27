@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:scooby_app/src/models/actores_model.dart';
-import 'package:scooby_app/src/models/pelicula_model.dart';
 
-import 'package:scooby_app/src/providers/peliculas_provider.dart';
 import 'package:scooby_app/src/providers/actores_provider.dart';
 
 class ActorDetalle extends StatelessWidget {
@@ -75,7 +73,7 @@ class ActorDetalle extends StatelessWidget {
                 Text(actor.name,
                     style: Theme.of(context).textTheme.bodyText1,
                     overflow: TextOverflow.ellipsis),
-                Text(actor.birthplace,
+                Text(actor.birthplace ?? 'default value',
                     style: Theme.of(context).textTheme.bodyText1,
                     overflow: TextOverflow.ellipsis),
                 Row(
@@ -97,14 +95,14 @@ class ActorDetalle extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
       child: Text(
-        actor.biography,
+        actor.biography ?? 'default value',
         textAlign: TextAlign.justify,
       ),
     );
   }
 
   Widget _crearCasting(Actor actor) {
-    final peliProvider = new PeliculasProvider();
+    final peliProvider = new ActoresProvider();
 
     return FutureBuilder(
       future: peliProvider.getCast(actor.id.toString()),
