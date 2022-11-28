@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:scooby_app/src/models/pelicula_model.dart';
-import 'package:scooby_app/src/providers/peliculas_provider.dart';
+import 'package:scooby_app/src/models/actores_model.dart';
+import 'package:scooby_app/src/providers/actores_provider.dart';
 
 class DataSearch extends SearchDelegate {
   String seleccion = '';
-  final peliculasProvider = new PeliculasProvider();
+  final peliculasProvider = new ActoresProvider();
 
   final peliculas = [
     'Spiderman',
@@ -71,7 +71,7 @@ class DataSearch extends SearchDelegate {
 
     return FutureBuilder(
       future: peliculasProvider.buscarPelicula(query),
-      builder: (BuildContext context, AsyncSnapshot<List<Pelicula>> snapshot) {
+      builder: (BuildContext context, AsyncSnapshot<List<Actor>> snapshot) {
         if (snapshot.hasData) {
           final peliculas = snapshot.data;
 
@@ -79,16 +79,15 @@ class DataSearch extends SearchDelegate {
               children: peliculas.map((pelicula) {
             return ListTile(
               leading: FadeInImage(
-                image: NetworkImage(pelicula.getPosterImg()),
+                image: NetworkImage(pelicula.getFoto()),
                 placeholder: AssetImage('assets/img/no-image.jpg'),
                 width: 50.0,
                 fit: BoxFit.contain,
               ),
-              title: Text(pelicula.title),
-              subtitle: Text(pelicula.originalTitle),
+              title: Text(pelicula.name),
               onTap: () {
                 close(context, null);
-                pelicula.uniqueId = '';
+                pelicula.imdbId = '';
                 Navigator.pushNamed(context, 'detalle', arguments: pelicula);
               },
             );
