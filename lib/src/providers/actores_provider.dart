@@ -35,7 +35,7 @@ class ActoresProvider {
   }
 
   Future<List<Actor>> getEnCines() async {
-    final url = Uri.https(_url, '3/person/popular', {'api_key': _apikey, 'language': _language}); // Pelicula
+    final url = Uri.https(_url, '3/person/popular', {'api_key': _apikey, 'language': _language, 'page': '500'}); // Pelicula
     return await _procesarRespuesta(url);
   }
 
