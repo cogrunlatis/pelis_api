@@ -73,7 +73,7 @@ class ActorDetalle extends StatelessWidget {
                 Text(actor.name,
                     style: Theme.of(context).textTheme.bodyText1,
                     overflow: TextOverflow.ellipsis),
-                Text(actor.birthplace ?? '',
+                Text(actor.birthplace,
                     style: Theme.of(context).textTheme.bodyText1,
                     overflow: TextOverflow.ellipsis),
                 Row(
@@ -95,7 +95,7 @@ class ActorDetalle extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
       child: Text(
-        actor.biography ?? '',
+        actor.biography,
         textAlign: TextAlign.justify,
       ),
     );
@@ -142,7 +142,7 @@ class ActorDetalle extends StatelessWidget {
           ),
         ),
         Text(
-          actor.name ?? '',
+          actor.name,
           overflow: TextOverflow.ellipsis,
         )
       ],
