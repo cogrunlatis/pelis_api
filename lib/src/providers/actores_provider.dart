@@ -65,11 +65,15 @@ class ActoresProvider {
     final url = Uri.https(_url, '3/person/$personId',
         {'api_key': _apikey, 'language': _language});
     final resp = await http.get(url);
-    var decodedData = json.decode(resp.body); //CAMBIADO
-    if (decodedData['biography'] == "")
+    var decodedData = json.decode(resp.body);
+    
+    var bio = decodedData['biography'];
+
+    if (bio == "") {
       return decodedData = 'La descripción no está disponible.';
-    else
-      return decodedData['biography'];
+    }
+
+    return bio;
   }
 
   Future<List<Actor>> buscarPelicula(String query) async {
