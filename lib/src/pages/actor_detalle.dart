@@ -73,19 +73,11 @@ class ActorDetalle extends StatelessWidget {
                 Text(actor.name ?? '',
                     style: Theme.of(context).textTheme.bodyText1,
                     overflow: TextOverflow.ellipsis),
-                Text(actor.birthplace ?? '',
-                    style: Theme.of(context).textTheme.bodyText1,
-                    overflow: TextOverflow.ellipsis),
-                Row(
-                  children: <Widget>[
-                    Icon(Icons.star_border),
-                    Text(actor.known.toString(),
-                        style: Theme.of(context).textTheme.bodyText1)
-                  ],
-                )
+                Text("Known for ${actor.known.toLowerCase()}",
+                    style: Theme.of(context).textTheme.bodyText1)
               ],
             ),
-          )
+          ),
         ],
       ),
     );

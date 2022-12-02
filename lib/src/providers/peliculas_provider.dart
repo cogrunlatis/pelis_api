@@ -9,7 +9,7 @@ import 'package:scooby_app/src/models/pelicula_model.dart';
 class PeliculasProvider {
   String _apikey = 'f34f618c9cc65e3484053629ecc2b900';
   String _url = 'api.themoviedb.org';
-  String _language = 'es-ES';
+  String _language = 'en-US';
 
   int _popularesPage = 0;
   bool _cargando = false;

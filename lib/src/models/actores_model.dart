@@ -15,7 +15,7 @@ class Actors {
 
 class Actor {
   double popularity;
-  String birthplace;
+  String place_of_birth;
   int gender;
   int id;
   String imdbId;
@@ -26,7 +26,7 @@ class Actor {
 
   Actor({
     this.popularity,
-    this.birthplace,
+    this.place_of_birth,
     this.gender,
     this.id,
     this.imdbId,
@@ -38,7 +38,7 @@ class Actor {
 
   Actor.fromJsonMap(Map<String, dynamic> json) {
     popularity = json['popularity'];
-    birthplace = json['place_of_birth'];
+    place_of_birth = json['place_of_birth'];
     gender = json['gender'];
     id = json['id'];
     imdbId = json['imdb_id'];

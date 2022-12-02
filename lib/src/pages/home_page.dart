@@ -15,8 +15,8 @@ class HomePage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text('Actores TMDB'),
-          backgroundColor: Colors.blueAccent,
+          title: Text('TMDB Actors'),
+          backgroundColor: Colors.redAccent,
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.search),
@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
         children: <Widget>[
           Container(
               padding: EdgeInsets.only(left: 20.0),
-              child: Text('Populares',
+              child: Text('Popular Actors',
                   style: Theme.of(context).textTheme.bodyText1)),
           SizedBox(height: 5.0),
           StreamBuilder(
